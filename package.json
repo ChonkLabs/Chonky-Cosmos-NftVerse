@@ -12,7 +12,12 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
-    "postinstall": "(cp -n .env.example .env) || echo already exists"
+    "postinstall": "(cp -n .env.example .env) || echo already exists",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "validate:package": "tsx scripts/test-package-config.ts"
   },
   "dependencies": {
     "0xsequence": "2.1.0",
@@ -48,7 +53,12 @@
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.16.0",
     "vite": "^5.4.17",
-    "wrangler": "^3.91.0"
+    "wrangler": "^3.91.0",
+    "vitest": "^2.1.0",
+    "@vitest/ui": "^2.1.0",
+    "package-json-validator": "^2.0.0",
+    "ajv": "^8.12.0",
+    "semver": "^7.5.4"
   },
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }
